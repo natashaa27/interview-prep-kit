@@ -1,0 +1,100 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+
+:root {
+  --bg: #090b10;
+  --bg-raised: #0d1017;
+  --surface: #12161f;
+  --surface-hover: #171c27;
+  --border: #232a37;
+  --border-soft: #1a1f29;
+  --text: #eef1f6;
+  --muted: #8791a3;
+  --muted-2: #5f6779;
+
+  /* Product vertical accent */
+  --accent-product: #6d5bff;
+  --accent-product-soft: rgba(109, 91, 255, 0.14);
+  --accent-product-glow: rgba(109, 91, 255, 0.35);
+
+  /* Consulting vertical accent */
+  --accent-consulting: #2dd4bf;
+  --accent-consulting-soft: rgba(45, 212, 191, 0.14);
+  --accent-consulting-glow: rgba(45, 212, 191, 0.35);
+
+  /* Active accent — set by Shell based on vertical */
+  --accent: var(--accent-product);
+  --accent-soft: var(--accent-product-soft);
+  --accent-glow: var(--accent-product-glow);
+
+  --radius: 12px;
+  --radius-sm: 8px;
+  --header-h: 60px;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+
+* ,*::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(109, 91, 255, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(45, 212, 191, 0.05), transparent 40%);
+  background-attachment: fixed;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted-2); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (max-width: 720px) {
+  .nav-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+  main.shell-main {
+    padding: 20px 16px !important;
+  }
+}
