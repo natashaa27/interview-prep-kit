@@ -7,15 +7,17 @@ import { CaseModal } from "./CaseModal";
 const CASE_TYPES: { label: string; value: CaseType | "all" }[] = [
   { label: "All", value: "all" },
   { label: "Market Sizing", value: "Market Sizing" },
+  { label: "Guesstimate", value: "Guesstimate" },
   { label: "Profitability", value: "Profitability" },
   { label: "Market Entry", value: "Market Entry" },
-  { label: "Guesstimate", value: "Guesstimate" },
   { label: "Growth Strategy", value: "Growth Strategy" },
-  { label: "Operations", value: "Operations" },
+  { label: "Pricing", value: "Pricing" },
   { label: "M&A", value: "M&A" },
+  { label: "Operations", value: "Operations" },
   { label: "Marketing", value: "Marketing" },
   { label: "Digital Transformation", value: "Digital Transformation" },
   { label: "Organizational", value: "Organizational" },
+  { label: "Unconventional", value: "Unconventional" },
 ];
 
 interface CasesSectionProps {

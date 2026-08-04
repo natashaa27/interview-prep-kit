@@ -4,11 +4,13 @@ export type CaseType =
   | "Market Entry"
   | "Guesstimate"
   | "Growth Strategy"
-  | "Operations"
+  | "Pricing"
   | "M&A"
+  | "Operations"
   | "Marketing"
   | "Digital Transformation"
-  | "Organizational";
+  | "Organizational"
+  | "Unconventional";
 
 export type SourceKey = string;
 
