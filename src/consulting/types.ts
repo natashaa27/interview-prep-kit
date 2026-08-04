@@ -5,7 +5,10 @@ export type CaseType =
   | "Guesstimate"
   | "Growth Strategy"
   | "Operations"
-  | "M&A";
+  | "M&A"
+  | "Marketing"
+  | "Digital Transformation"
+  | "Organizational";
 
 export type SourceKey = string;
 
@@ -36,17 +39,6 @@ export interface Framework {
   steps: FrameworkStep[];
 }
 
-export interface InterviewExperience {
-  id: number;
-  company: string;
-  role: string;
-  offered: "Yes" | "No" | "Unknown";
-  type: "Product" | "Tech" | "BA";
-  source: SourceKey;
-  rounds: string;
-  tip: string;
-}
-
 export interface Handbook {
   icon: string;
   name: string;
@@ -58,11 +50,4 @@ export interface Handbook {
   pdfFile?: string;
 }
 
-export interface Resource {
-  icon: string;
-  category: "Book" | "YouTube" | "Twitter / X" | "Website" | "Course" | "Community";
-  name: string;
-  description: string;
-}
-
-export type SectionId = "cases" | "frameworks" | "experiences" | "handbooks" | "resources";
+export type SectionId = "cases" | "frameworks" | "handbooks";
